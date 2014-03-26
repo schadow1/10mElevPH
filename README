@@ -1,0 +1,33 @@
+Philippine Elevation Contour Map
+
+README
+
+Philippine Elevation Contours Map Generation using Shuttle Radar Topography Mission,
+Aster GDEM, Russia 200k and 100k, etc.
+for use with Garmin GPSr devices
+
+Updated Philippine elevation data as of December 30, 2011
+
+Download map here:
+ - http://www.s1expeditions.com/p/openstreetmaps.html
+
+Changes and updates
+
+20140326
+ - initial release
+ - 10-meter elevation step
+ - 3 arc seconds accuracy
+ - artifacts fixed in comparison from other known variants
+ - based from 
+ - green design
+
+Data from Viewfinder Panoramas.org: http://www.viewfinderpanoramas.org/
+Generation and Compilation from Schadow1 Expeditions: http://www.s1expeditions.com
+
+By Schadow1 Expeditions and is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+
+Disclaimer
+Use at your own risk. Schadow1 Expeditions is not liable for
+any accidents while using this map.
+
+
