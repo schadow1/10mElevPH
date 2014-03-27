@@ -1,0 +1,16 @@
+max-jobs=4
+code-page=1252
+series-name=ElevContour Philippines
+description=ElevContour Philippines
+tdbfile
+latin1
+country-abbr=PHL
+country-name=PHILIPPINES
+family-id=539
+family-name=http://www.s1expeditions.com
+show-profiles=1
+draw-priority: 30
+transparent
+merge-lines
+style-file=style/default
+check-styles
