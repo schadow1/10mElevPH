@@ -17,8 +17,8 @@ Changes and updates
  - initial release
  - 10-meter elevation step
  - 3 arc seconds accuracy
- - artifacts fixed in comparison from other known variants
- - based from 
+ - artifacts fixed and missing areas not available in contrast from other known variants
+ - based from SRTM and Aster GDEM missions
  - green design
 
 Data from Viewfinder Panoramas.org: http://www.viewfinderpanoramas.org/
