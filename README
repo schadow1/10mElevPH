@@ -6,12 +6,18 @@ Philippine Elevation Contours Map Generation using Shuttle Radar Topography Miss
 Aster GDEM, Russia 200k and 100k, etc.
 for use with Garmin GPSr devices
 
-Updated Philippine elevation data as of December 30, 2011
+Updated Philippine elevation data as of December 30, 2014
 
 Download map here:
  - http://www.s1expeditions.com/p/openstreetmaps.html
 
 Changes and updates
+
+20150129
+ - 10-meter elevation step
+ - 1 arc second accuracy
+ - non-void filled
+ - based on SRTM Global 1-arc second release data as of December 30, 2014
 
 20140407
  - added Kalayaan Group of Islands in the topo map
@@ -21,10 +27,10 @@ Changes and updates
  - 10-meter elevation step
  - 3 arc seconds accuracy
  - artifacts fixed and missing areas not available in contrast from other known variants
- - based from SRTM and Aster GDEM missions
+ - based from SRTM and Aster GDEM missions via View Panoramas.org release data as of December 30, 2011
  - green design
 
-Data from Viewfinder Panoramas.org: http://www.viewfinderpanoramas.org/
+Data from US Geological Survey: http://www.earthexplorer.usgs.gov
 Generation and Compilation from Schadow1 Expeditions: http://www.s1expeditions.com
 
 By Schadow1 Expeditions and is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
