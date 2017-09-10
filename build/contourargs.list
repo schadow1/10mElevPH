@@ -2,15 +2,23 @@ max-jobs=4
 code-page=1252
 series-name=ElevContour Philippines
 description=ElevContour Philippines
+copyright-message: 2017 s1expeditions.com All rights reserved.
+license-file=license-ccbynd.txt
 tdbfile
 latin1
+index
 country-abbr=PHL
 country-name=PHILIPPINES
+overview-mapname=elevph
 family-id=539
 family-name=http://www.s1expeditions.com
 show-profiles=1
 draw-priority: 30
 transparent
+min-size-polygon=8
+polygon-size-limits=24:12, 18:10, 16:8, 14:4, 12:2, 11:0
+overview-levels=4:17,5:16,6:15,7:14,8:12
+remove-ovm-work-files
 merge-lines
-style-file=style/default
+style-file=examples/styles/contours
 check-styles

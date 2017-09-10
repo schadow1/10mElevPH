@@ -3,7 +3,7 @@ Philippine Elevation Contour Map
 README
 
 Philippine Elevation Contours Map Generation using Shuttle Radar Topography Mission,
-Aster GDEM, Russia 200k and 100k, etc.
+SRTMv3 Global 1-arcsecond Void-filled
 for use with Garmin GPSr devices
 
 Updated Philippine elevation data as of December 30, 2014
@@ -12,6 +12,11 @@ Download map here:
  - http://www.s1expeditions.com/p/openstreetmaps.html
 
 Changes and updates
+
+20170910
+- compile process optimization
+- offset fix
+- color change
 
 20150131
  - compile process fix, improving detail.

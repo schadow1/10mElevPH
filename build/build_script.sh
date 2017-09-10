@@ -7,9 +7,9 @@
 # AUTHOR(S):    Ervin Malicdem schadow1@s1expeditions.com
 #
 # PURPOSE:      Shell script for creating Philippine Contour map for Garmin.
-#               Requires srtm2osm, segmenter, osmconvert, mkgmap, nsis. 
+#               Requires Python 2.7, BeautifulSoup 3.20, Phyghtmap 1.74, mkgmap, nsis. 
 #
-#               This program is licensed under CC-BY-NC-SA under the Creative Commons License (>=v3).
+#               This program is licensed under CC-BY-ND under the Creative Commons License (>=v4).
 #
 #############################################################################
 
@@ -24,48 +24,21 @@ srtmcache=------
 
 
 #Nothing to change below
-#===========
-cd ${srtmcache}
 
-# Download 3 arc-second DEM
-wget -c http://www.viewfinderpanoramas.org/dem3/F51.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/E50.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/E51.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/D50.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/D51.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/C50.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/C51.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/C52.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/B50.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/B51.zip
-wget -c http://www.viewfinderpanoramas.org/dem3/B52.zip
-ls -al
 
-# Download OSMConvert
-cd ${work_dir}
-wget -O ${download_link_osmconvert}
-ls -al
-
-# Convert DEM data to OSM Readable Data
-srtm2osm -bounds1 4.41242 116.75387 21.53320 126.54074 -step 10 -cat 400 100 -large -corrxy 0.0005 0.0006 -large -o ph.srtm.osm
-
-# Fix over segments
-SRTM2OSMsegmenter -i=ph.srtm.osm -o=ph2.srtm.osm -s=250 -w=1
-
-# Convert OSM file to O5M
-osmconvert ph2.srtm.osm --out-o5m -o=philippines.o5m
-
-# Lock unclosed segments to boundary
+# Download poly
 wget -c http://download.geofabrik.de/asia/philippines.poly
-osmconvert philippines.o5m -B=philippines.poly --complete-ways -o=philippines.osm
+
+#Phyghtmap
+phyghtmap --polygon=philippines.poly  -j 4 -s 10 -0 -o philippines --srtm=1 --max-nodes-per-tile=0 --max-nodes-per-way=0 --pbf  
 
 # Split the file using splitter.jar
-java -ea -Xmx5030m -jar splitter.jar --cache=cache --max-nodes=1000000 --mapid=12520000 --keep-complete=false --mixed philippines.osm
+java -ea -Xmx5030m -jar splitter.jar --cache=cache --mapid=1252 --keep-complete=false --mixed philippines.osm.pbf
 
 ls -al
 
 # compile map designed for 4 core processor with 6GB physical mem
-java -Xmx1258m -jar mkgmap.jar --read-config=contourargs.list --output-dir=${output_dir} ${split_dir}/*.osm.pbf ELEVPH.TYP
+java -Xmx1280m -jar mkgmap.jar --read-config=contourargs.list --output-dir=${output_dir} ${split_dir}/*.osm.pbf ELEVPH.TYP
 
 ls -al
 
