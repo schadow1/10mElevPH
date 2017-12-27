@@ -13,24 +13,27 @@ Download map here:
 
 Changes and updates
 
-20170910
+20180101 v3.1
+- map style fix
+
+20170910 v3.0
 - compile process optimization
 - offset fix
 - color change
 
-20150131
+20150131 v2.1
  - compile process fix, improving detail.
  
-20150129
+20150129 v2.0
  - 10-meter elevation step
  - 1 arc second accuracy
  - non-void filled
  - based on SRTM Global 1-arc second release data as of December 30, 2014
 
-20140407
+20140407 v1.1
  - added Kalayaan Group of Islands in the topo map
 
-20140326
+20140326 v1.0
  - initial release
  - 10-meter elevation step
  - 3 arc seconds accuracy
