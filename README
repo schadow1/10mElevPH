@@ -2,16 +2,19 @@ Philippine Elevation Contour Map
 
 README
 
-Philippine Elevation Contours Map Generation using Shuttle Radar Topography Mission,
-SRTMv3 Global 1-arcsecond Void-filled
+Philippine Elevation Contours Map Generation using NASADEM Merged DEM,
+Global 1-arcsecond Merged Digital Elevation Model
 for use with Garmin GPSr devices
 
-Updated Philippine elevation data as of December 30, 2014
+Updated Philippine elevation data as of February 20, 2020
 
 Download map here:
  - http://www.s1expeditions.com/p/openstreetmaps.html
 
 Changes and updates
+
+20200306 v4.0
+- Use of NASADEM Merged Digital Elevation Model 1 arc second (Feb. 2020) on 3D Terrain
 
 20180101 v3.1
 - map style fix
